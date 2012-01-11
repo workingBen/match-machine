@@ -15,4 +15,5 @@
 * config.assets.initialize_on_precompile = false :: added to application.rb per Devise install
 * test env should use get instead of delete for devise sign out, so cucumber works
 * add filter params for password and password_confirmation
+* rails g migration AddUsernameAndOkcupidPassToUsers username:string okcupid_pass:string
 
