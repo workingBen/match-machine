@@ -1,0 +1,18 @@
+* new rails app
+* git init
+* git flow init
+* add RSpec and Cucumber to Gemfile https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial
+* rails g rspec:install
+* rake -T   :: lists all rake tasks and includes ones from rspec
+* rake db:migrate to create db/schema.rb, necessary for 'rake spec'
+* rake spec :: no tests, so this just reports that back
+* rails generate cucumber:install --capybara --rspec :: use cucumber generator to setup cucumber for rails
+* add action mailer dev/prod configs
+* gem devise, bundle install
+* rails g devise:install
+* rails g devise User
+* routes :: devise_for :users
+* config.assets.initialize_on_precompile = false :: added to application.rb per Devise install
+* test env should use get instead of delete for devise sign out, so cucumber works
+* add filter params for password and password_confirmation
+
