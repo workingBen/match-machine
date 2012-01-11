@@ -18,3 +18,5 @@
 * rails g migration AddUsernameAndOkcupidPassToUsers username:string okcupid_pass:string
 * rails generate devise:views
 * update devise registration edit/new views for username/okcupid_pass
+* rm public/index.html
+
