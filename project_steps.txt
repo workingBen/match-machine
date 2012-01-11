@@ -19,4 +19,5 @@
 * rails generate devise:views
 * update devise registration edit/new views for username/okcupid_pass
 * rm public/index.html
-
+* rails g controller home index
+* root to: "home#index" in routes
