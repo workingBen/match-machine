@@ -50,6 +50,12 @@ describe User do
     user_with_duplicate_email = User.new(@attr)
     user_with_duplicate_email.should_not be_valid
   end
+
+  it "should require a username" do
+    no_username_user = User.new(@attr.merge(:username => ""))
+    no_username_user.should_not be_valid
+  end
+
   
   describe "passwords" do
 
@@ -101,6 +107,7 @@ describe User do
     end
 
   end
+
 
 end
 
