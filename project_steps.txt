@@ -12,4 +12,4 @@
 * rails g devise:install
 * rails g devise User
 * routes :: devise_for :users
-
+* config.assets.initialize_on_precompile = false :: added to application.rb per Devise install
