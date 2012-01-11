@@ -10,4 +10,6 @@
 * add action mailer dev/prod configs
 * gem devise, bundle install
 * rails g devise:install
+* rails g devise User
+* routes :: devise_for :users
 
