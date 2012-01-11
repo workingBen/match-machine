@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+#
+puts 'SETTING UP DEFAULT USER LOGIN'
+user = User.create! :name => 'Matchmachine Tester', :email => 'benjamin.pellow@gmail.com', :password => 'please', :password_confirmation => 'please', username: 'match-machine', okcupid_pass: 'fake_pass'
+puts 'New user created: ' << user.username
+#   
