@@ -1,0 +1,5 @@
+* new rails app
+* git init
+* git flow init
+* add RSpec and Cucumber to Gemfile https://github.com/RailsApps/rails3-devise-rspec-cucumber/wiki/Tutorial
+* 
