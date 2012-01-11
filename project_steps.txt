@@ -7,3 +7,7 @@
 * rake db:migrate to create db/schema.rb, necessary for 'rake spec'
 * rake spec :: no tests, so this just reports that back
 * rails generate cucumber:install --capybara --rspec :: use cucumber generator to setup cucumber for rails
+* add action mailer dev/prod configs
+* gem devise, bundle install
+* rails g devise:install
+
