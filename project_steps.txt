@@ -21,3 +21,6 @@
 * rm public/index.html
 * rails g controller home index
 * root to: "home#index" in routes
+* add db/seeds
+* rake db:seed
+
