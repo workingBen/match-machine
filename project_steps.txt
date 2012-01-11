@@ -16,4 +16,5 @@
 * test env should use get instead of delete for devise sign out, so cucumber works
 * add filter params for password and password_confirmation
 * rails g migration AddUsernameAndOkcupidPassToUsers username:string okcupid_pass:string
-
+* rails generate devise:views
+* update devise registration edit/new views for username/okcupid_pass
