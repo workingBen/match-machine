@@ -18,6 +18,7 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
