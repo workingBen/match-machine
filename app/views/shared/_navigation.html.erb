@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>        
+  <%= link_to(image_tag('logout.png'), destroy_user_session_path, :method=>'delete') %>        
   </li>
 <% else %>
   <li>
@@ -10,7 +10,7 @@
 <%= image_tag 'pipe.png' %>
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Edit account', edit_user_registration_path) %>
+  <%= link_to(image_tag('edit_account.png'), edit_user_registration_path) %>
   </li>
 <% else %>
   <li>
