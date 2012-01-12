@@ -22,6 +22,7 @@ gem 'devise'
 group :development, :test do
   gem 'rspec-rails'
   gem 'ruby-debug19'
+  gem 'heroku'
 end
 
 group :test do
