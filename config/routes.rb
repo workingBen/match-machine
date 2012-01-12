@@ -1,4 +1,10 @@
 MatchMachine::Application.routes.draw do
+  get "machine/setup"
+
+  get "machine/run"
+
+  get "machine/matches"
+
   root to: 'home#index'
   devise_for :users
   resources :users, only: :show
