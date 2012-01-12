@@ -18,10 +18,12 @@ end
 
 gem 'jquery-rails'
 gem 'devise'
+gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'ruby-debug19'
+  gem 'heroku'
 end
 
 group :test do
