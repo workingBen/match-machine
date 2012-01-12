@@ -10,13 +10,18 @@
   margin-right: auto;
   display: block;
 }
+.clear {
+  clear: both;
+}
 body {
   background: #2963A4;
 }
 ul.hmenu {
   list-style: none;	
-  margin: 0 0 2em;
+  margin-top: 20px;
+  margin-right: 10%;
   padding: 0;
+  float: right;
 }
 ul.hmenu li {
   display: inline;  
