@@ -6,18 +6,18 @@ end
 
 def sign_up user
   visit '/users/sign_up'
-  fill_in "Email", :with => user[:email]
-  fill_in "Username", :with => user[:username]
-  fill_in "Okcupid pass", :with => user[:okcupid_pass]
-  fill_in "Password", :with => user[:password]
-  fill_in "Password confirmation", :with => user[:password_confirmation]
+  fill_in "user_email", :with => user[:email]
+  fill_in "user_username", :with => user[:username]
+  fill_in "user_okcupid_pass", :with => user[:okcupid_pass]
+  fill_in "user_password", :with => user[:password]
+  fill_in "user_password_confirmation", :with => user[:password_confirmation]
   click_button "Sign up"
 end
 
 def sign_in user
   visit '/users/sign_in'
-  fill_in "Email", :with => user[:email]
-  fill_in "Password", :with => user[:password]
+  fill_in "user_email", :with => user[:email]
+  fill_in "user_password", :with => user[:password]
   click_button "Sign in"
 end
 
@@ -84,8 +84,8 @@ end
 
 When /^I edit my account details$/ do
   click_link "Edit account"
-  fill_in "Username", :with => "newusername"
-  fill_in "Current password", :with => valid_user[:password]
+  fill_in "user_username", :with => "newusername"
+  fill_in "user_current_password", :with => valid_user[:password]
   click_button "Update"
 end
 
@@ -95,15 +95,15 @@ end
 
 ### THEN ###
 Then /^I should be signed in$/ do
-  page.should have_content "Logout"
-  page.should_not have_content "Sign up"
-  page.should_not have_content "Login"
+  page.should have_css "img[alt=Logout]"
+  page.should_not have_css "img[alt='Sign up']"
+  page.should_not have_css "img[alt=Login]"
 end
 
 Then /^I should be signed out$/ do
-  page.should have_content "Sign up"
-  page.should have_content "Login"
-  page.should_not have_content "Logout"
+  page.should have_css "img[alt='Sign up']"
+  page.should have_css "img[alt=Login]"
+  page.should_not have_css "img[alt=Logout]"
 end
 
 Then /^I should see a succesfull sign up message$/ do
