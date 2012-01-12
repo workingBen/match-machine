@@ -21,6 +21,7 @@ gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'ruby-debug19'
 end
 
 group :test do

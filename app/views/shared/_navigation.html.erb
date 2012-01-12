@@ -1,20 +1,25 @@
 <% if user_signed_in? %>
   <li>
-  <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>        
+  <%= link_to(image_tag('logout.png', alt: 'Logout'), destroy_user_session_path, title: 'Logout', method: 'delete') %>        
   </li>
 <% else %>
   <li>
-  <%= link_to(image_tag('login.png'), new_user_session_path)  %>  
+  <%= link_to(image_tag('login.png'), new_user_session_path, title: 'Login')  %>  
   </li>
 <% end %>
 <%= image_tag 'pipe.png' %>
-<% if user_signed_in? %>
+
+<% if user_signed_in? and controller.action_name != 'edit' and controller.action_name != 'update' %>
   <li>
-  <%= link_to('Edit account', edit_user_registration_path) %>
+  <%= link_to(image_tag('edit_account.png'), edit_user_registration_path, title: 'Edit account') %>
+  </li>
+<% elsif user_signed_in? %>
+  <li>
+  <%= link_to(image_tag('run_machine.png'), root_path, title: 'Run machine') %>
   </li>
 <% else %>
   <li>
-  <%= link_to(image_tag('sign_up.png'), new_user_registration_path)  %>
+  <%= link_to(image_tag('sign_up.png', alt: 'Sign up'), new_user_registration_path, title: 'Sign up')  %>
   </li>
 <% end %>
 

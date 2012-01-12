@@ -5,7 +5,7 @@ form {
 	padding-bottom: 10px;
 	width: 600px;
 }
-.user_new {
+.user_new, .user_edit, .button_to {
   width: 300px;
 }
 fieldset {
@@ -30,7 +30,7 @@ legend {
 	-khtml-border-radius: 5px;
 	text-transform: capitalize;
 }
-form p {
+form p, form div.field_with_errors {
 	padding: 0;
   margin: 4px;
 	position: relative;
@@ -43,7 +43,7 @@ form p:after {
 	line-height: 0;
 	height: 0;
 }
-form p.nolabel * {
+form p.nolabel, form div.field_with_errors * {
 }
 label {
 	width: 100px;
@@ -73,7 +73,7 @@ input[type=text], input[type=email], textarea, input[type=password] {
 	bottom: 0;
 	left: 110px;
 }
-p.nolabel input[type=text], p.nolabel input[type=email], p.nolabel textarea, p.nolabel input[type=password] {
+p.nolabel input[type=text], p.nolabel input[type=email], p.nolabel textarea, p.nolabel input[type=password], div.field_with_errors input[type=text], div.field_with_errors input[type=email], div.field_with_errors textarea, div.field_with_errors input[type=password] {
 	position: relative;
 	left: 0;
 }

@@ -7,3 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//
+$(document).ready(function() {  
+//  $("#flash_notice").effect("bounce", { times:3 }, 300);;
+  $("#flash_notice, #flash_error").fadeIn(500).delay(6000).fadeOut(500)
+});

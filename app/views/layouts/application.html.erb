@@ -4,6 +4,7 @@
   <title>MatchMachine</title>
   <%= stylesheet_link_tag    "application" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -15,7 +16,7 @@
   </ul>
 
   <%- flash.each do |name, msg| -%>
-    <%= content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String) %>
+    <%= content_tag :div, msg, :id => "flash_#{name}", style: 'display: none;' if msg.is_a?(String) %>
   <%- end -%>
 <%= yield %>
 
