@@ -8,9 +8,13 @@
   </li>
 <% end %>
 <%= image_tag 'pipe.png' %>
-<% if user_signed_in? %>
+<% if user_signed_in? and controller.action_name != 'edit' %>
   <li>
   <%= link_to(image_tag('edit_account.png'), edit_user_registration_path) %>
+  </li>
+<% elsif user_signed_in? and controller.action_name == 'edit' %>
+  <li>
+  <%= link_to(image_tag('run_machine.png'), root_path) %>
   </li>
 <% else %>
   <li>
