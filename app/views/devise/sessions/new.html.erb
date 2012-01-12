@@ -1,11 +1,15 @@
 <div class="centerbox_sm clear">
   <div class="signin">
-<%= image_tag 'sign_in_title.png', class: 'center' %>
+    <%= image_tag 'sign_in_title.png', class: 'center' %>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <p class="nolabel"><%= f.email_field :email, placeholder: 'Email' %></p>
+  <p class="nolabel">
+    <%= f.email_field :email, placeholder: 'Email' %>
+  </p>
 
-  <p class="nolabel"><%= f.password_field :password, placeholder: 'Password' %></p>
+  <p class="nolabel">
+    <%= f.password_field :password, placeholder: 'Password' %>
+  </p>
 
   <div>
     <%= f.submit "Sign in", class: 'fr submit' %>
@@ -16,6 +20,6 @@
   <div class="clear"></div>
 <% end %>
 
-</div>
-<%= render :partial => "devise/shared/links" %>
+  </div>
+  <%= render :partial => "devise/shared/links" %>
 </div>
