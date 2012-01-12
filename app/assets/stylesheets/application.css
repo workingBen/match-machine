@@ -5,6 +5,16 @@
  *= require_self
  *= require_tree . 
 */
+.sm_txt {
+  color: white;
+  font-family: Tahoma,Arial,sans-serif;
+  font-size: 0.7em;
+  text-shadow: none;
+  text-transform: uppercase;
+}
+.fl {
+  float: left;
+}
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -12,6 +22,24 @@
 }
 .clear {
   clear: both;
+}
+.centerbox {
+  padding-top: 40px;
+  float: center;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+.centerbox_sm {
+  padding-top: 40px;
+  float: center;
+  width: 260px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
 }
 body {
   background: #2963A4;
