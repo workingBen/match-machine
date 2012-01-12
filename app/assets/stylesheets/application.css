@@ -5,16 +5,31 @@
  *= require_self
  *= require_tree . 
 */
+.signin {
+  border: 1px solid #d8d8d8;
+  /* background-color:rgba(231,238,245,0.2);
+  background-color:rgba(246,246,246,0.2); 
+  background-color:rgba(236,55,102,0.2); */
+  background-color:rgba(24,59,98,0.6);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-border-radius: 5px;
+	-khtml-border-radius: 5px;
+}
 .sm_txt {
   color: white;
   font-family: Tahoma,Arial,sans-serif;
   font-size: 0.7em;
   text-shadow: none;
   text-transform: uppercase;
+  margin-left: 40px;
 }
-.fl {
-  float: left;
+.submit {
+  margin-right: 40px;
 }
+.fl { float: left; }
+.fr { float: right; }
+.tal { text-align: left; padding-left: 10px; }
 .center {
   margin-left: auto;
   margin-right: auto;
@@ -35,11 +50,15 @@
 .centerbox_sm {
   padding-top: 40px;
   float: center;
-  width: 260px;
+  width: 300px;
   margin-left: auto;
   margin-right: auto;
   display: block;
   text-align: center;
+}
+.logo {
+  margin-top: 20px;
+  margin-left: 10%;
 }
 body {
   background: #2963A4;

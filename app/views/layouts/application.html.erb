@@ -7,6 +7,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% unless controller.controller_name == 'home' and controller.action_name == 'index' %>
+    <%= image_tag 'match_machine_sm.png', class: 'logo' %>
+  <% end %>
   <ul class="hmenu">
     <%= render 'shared/navigation' %>
   </ul>

@@ -2,10 +2,13 @@
   <%= link_to "Sign in", new_session_path(resource_name) %><br />
 <% end -%>
 
+<% unless true %>
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
   <%= link_to image_tag('sign_up_sm.png'), new_registration_path(resource_name) %><br />
 <% end -%>
+<% end %>
 
+<br/>
 <%- if devise_mapping.recoverable? && controller_name != 'passwords' %>
   <%= link_to image_tag('forgot_pass_sm.png'), new_password_path(resource_name) %><br />
 <% end -%>
