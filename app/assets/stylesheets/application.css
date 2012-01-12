@@ -5,6 +5,14 @@
  *= require_self
  *= require_tree . 
 */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+body {
+  background: #2963A4;
+}
 ul.hmenu {
   list-style: none;	
   margin: 0 0 2em;
