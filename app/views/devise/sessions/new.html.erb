@@ -1,17 +1,25 @@
-<h2>Sign in</h2>
+<div class="centerbox_sm clear">
+  <div class="signin">
+    <%= image_tag 'sign_in_title.png', class: 'center' %>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+  <p class="nolabel">
+    <%= f.email_field :email, placeholder: 'Email' %>
+  </p>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+  <p class="nolabel">
+    <%= f.password_field :password, placeholder: 'Password' %>
+  </p>
 
-  <% if devise_mapping.rememberable? -%>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
-
-  <div><%= f.submit "Sign in" %></div>
+  <div>
+    <%= f.submit "Sign in", class: 'fr submit' %>
+    <% if devise_mapping.rememberable? -%>
+      <div class="sm_txt"><%= f.check_box :remember_me, class: 'fl' %><%= f.label :remember_me, class: 'fl tal' %></div>
+    <% end -%>
+  </div>
+  <div class="clear"></div>
 <% end %>
 
-<%= render :partial => "devise/shared/links" %>
+  </div>
+  <%= render :partial => "devise/shared/links" %>
+</div>
