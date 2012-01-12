@@ -1,8 +1,6 @@
 MatchMachine::Application.routes.draw do
   get "machine/setup"
-
   get "machine/run"
-
   get "machine/matches"
 
   root to: 'home#index'
