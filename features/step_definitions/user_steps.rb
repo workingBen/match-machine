@@ -6,12 +6,11 @@ end
 
 def sign_up user
   visit '/users/sign_up'
-  fill_in "Name", :with => user[:name]
   fill_in "Email", :with => user[:email]
+  fill_in "Username", :with => user[:username]
+  fill_in "Okcupid pass", :with => user[:okcupid_pass]
   fill_in "Password", :with => user[:password]
   fill_in "Password confirmation", :with => user[:password_confirmation]
-  fill_in "Username", :with => user[:username]
-  fill_in "Okcupid Pass", :with => user[:okcupid_pass]
   click_button "Sign up"
 end
 
@@ -85,7 +84,7 @@ end
 
 When /^I edit my account details$/ do
   click_link "Edit account"
-  fill_in "Name", :with => "newname"
+  fill_in "Username", :with => "newusername"
   fill_in "Current password", :with => valid_user[:password]
   click_button "Update"
 end
