@@ -10,6 +10,10 @@ class MachineController < ApplicationController
     redirect_to edit_user_registration_path, flash: { error: NOT_AUTHORIZED } unless @html = okcupid_matches(current_user)
   end
 
+  def message
+    debugger
+  end
+
   private
 
   # BEFORE FILTERS #
@@ -53,11 +57,11 @@ class MachineController < ApplicationController
     html = ''
     doc = Nokogiri::HTML(parsed_url)
     doc.css('div.match_row').each do |node|
+      row_username = node.to_s.scan(/id=\"usr-[a-zA-Z0-9\-_]*"/)[0].gsub('id="usr-', '').gsub('"', '')
       html << "<div class='wrapper'>"
       html << node.css('div.user_info').to_s.gsub('/profile/', 'http://www.okcupid.com/profile/') + "\n"
       html << node.css('div.percentages').to_s + "\n"
-      #html << '<div class="hover_nav" style="display: none;">view | message</div>' + "\n"
-      html << view_context.hover_nav + "\n"
+      html << view_context.hover_nav(row_username) + "\n"
       html << "</div>"
     end
     html.present? ? html : nil

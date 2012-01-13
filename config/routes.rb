@@ -1,6 +1,7 @@
 MatchMachine::Application.routes.draw do
   get "machine/setup"
   get "machine/matches"
+  post "machine/message"
 
   root to: 'home#index'
   devise_for :users
