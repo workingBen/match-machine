@@ -79,7 +79,7 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
-#flash_notice, #flash_alert {
+#flash_notice, #flash_error {
   padding: 8px 8px;
   margin: 0 auto;
   width: 500px;
@@ -92,7 +92,7 @@ ul.hmenu li {
   background-color: #1d4063;
   border: solid 1px #3c84cd;
 }
-#flash_alert {
+#flash_error {
   background-color: #FCC;
   border: solid 1px #C66;
 }
