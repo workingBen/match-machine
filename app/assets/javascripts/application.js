@@ -15,4 +15,6 @@ $(document).ready(function() {
     function() { $(this).children('.hover_nav').show(); },
     function() { $(this).children('.hover_nav').hide(); }
   );
+
+  $('.view_user').each(function(index) { $(this).parent().parent().attr('target', "_blank") });
 });
