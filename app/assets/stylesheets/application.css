@@ -5,6 +5,12 @@
  *= require_self
  *= require_tree . 
 */
+.hover_nav {
+  position: relative;
+  top: -90px;
+  left: 50px;
+  z-index: 2;
+}
 .signin {
   border: 1px solid #d8d8d8;
   /* background-color:rgba(231,238,245,0.2);
@@ -61,6 +67,10 @@ div {
   margin-right: auto;
   display: block;
   text-align: center;
+}
+.matches-container {
+  padding-top: 40px;
+  width: 1260px;
 }
 .logo {
   margin-top: 20px;

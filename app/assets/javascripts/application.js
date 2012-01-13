@@ -10,4 +10,9 @@
 //
 $(document).ready(function() {  
   $("#flash_notice, #flash_error").fadeIn(500).delay(6000).fadeOut(500);
+
+  $("div.wrapper").hover( 
+    function() { $(this).children('.hover_nav').show(); },
+    function() { $(this).children('.hover_nav').hide(); }
+  );
 });

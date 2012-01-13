@@ -17,8 +17,11 @@
   <li>
   <%= link_to(image_tag('sign_up.png', alt: 'Sign up'), new_user_registration_path, title: 'Sign up')  %>
   </li>
+<% else %>
+  <% @nopipe = true %>
 <% end %>
 <% if user_signed_in? and controller.action_name != 'setup' %>
+  <% unless @nopipe %><%= image_tag 'pipe.png' %><% end %>
   <li>
   <%= link_to(image_tag('restart_machine.png'), machine_setup_path, title: 'Restart machine') %>
   </li>

@@ -1,0 +1,70 @@
+div.wrapper {
+  width: 400px;
+  height: 110px;
+  background-color: rgba(248, 230, 240, 0.2);
+  padding: 5px;
+  margin: 5px;
+  float: left;
+  font-size: 1.6em;
+/* border-right: 1px solid;
+border-bottom: 1px solid; */
+}
+p.activity {
+  font-size: 1em;
+}
+div.user_info {
+  float: left;
+  line-height: 6px;
+  width: 300px;
+  padding-left: 15px;
+  height: 110px;
+}
+div.percentages {
+  height: 110px; 
+}
+a.user_image {
+  float: left;
+  margin-right: 20px;
+  margin-top: 13px;
+}
+.user_info p {
+  font-size: 100%;
+}
+/*
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th {
+margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+border-image: initial;
+}
+div {
+display: block;
+}
+body, input, textarea {
+font-family: Verdana, "Bitsream Vera Sans", sans-serif;
+font-weight: normal;
+font-size: 12px;
+line-height: 19px;
+letter-spacing: 0px;
+color: #555;
+}
+h4.match_row_screenname a, h4.match_row_screenname a span, h4.match_row_screenname div.alist_badge img {
+vertical-align: top;
+text-decoration: none;
+}
+a:link, a:visited {
+color: #2963A4;
+}
+a.user_image {
+float: left;
+margin-right: 15px;
+width: 82px;
+height: 82px;
+overflow: visible;
+position: relative;
+-moz-box-shadow: 0 1px 3px #BBBBBB;
+-webkit-box-shadow: 0 1px 3px #BBBBBB;
+}
+*/
+
