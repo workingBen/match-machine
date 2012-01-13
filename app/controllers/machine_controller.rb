@@ -56,7 +56,8 @@ class MachineController < ApplicationController
       html << "<div class='wrapper'>"
       html << node.css('div.user_info').to_s.gsub('/profile/', 'http://www.okcupid.com/profile/') + "\n"
       html << node.css('div.percentages').to_s + "\n"
-      html << '<div class="hover_nav" style="display: none;">view | message</div>' + "\n"
+      #html << '<div class="hover_nav" style="display: none;">view | message</div>' + "\n"
+      html << view_context.hover_nav + "\n"
       html << "</div>"
     end
     html.present? ? html : nil
@@ -76,5 +77,5 @@ class MachineController < ApplicationController
 
     @sess.post(uri.to_s, param_str || jhash(params))
   end
-  
+ 
 end

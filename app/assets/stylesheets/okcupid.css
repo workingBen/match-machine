@@ -21,6 +21,7 @@ div.user_info {
 }
 div.percentages {
   height: 110px; 
+  float: left;
 }
 a.user_image {
   float: left;

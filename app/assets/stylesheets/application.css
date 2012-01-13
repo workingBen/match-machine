@@ -7,15 +7,20 @@
 */
 .hover_nav {
   position: relative;
-  top: -90px;
-  left: 50px;
   z-index: 2;
+  background-color:rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+}
+.hover_nav form {
+  float: left;
+  width: 100px;
+  left: 120px;
+  position: relative;
+  top: -75%;
 }
 .signin {
   border: 1px solid #d8d8d8;
-  /* background-color:rgba(231,238,245,0.2);
-  background-color:rgba(246,246,246,0.2); 
-  background-color:rgba(236,55,102,0.2); */
   background-color:rgba(24,59,98,0.6);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
