@@ -75,7 +75,8 @@ class MachineController < ApplicationController
       html << "<div class='wrapper'>"
       html << node.css('div.user_info').to_s.gsub('/profile/', 'http://www.okcupid.com/profile/') + "\n"
       html << node.css('div.percentages').to_s + "\n"
-      html << view_context.hover_nav(row_username) + "\n"
+      essay = node.css('div.essay').to_s + "\n"
+      html << view_context.hover_nav(row_username, essay) + "\n"
       html << "</div>"
     end
     html.present? ? html : nil
