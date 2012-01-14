@@ -1,2 +1,14 @@
-<h1>Machine#setup</h1>
-<p>Find me in app/views/machine/setup.html.erb</p>
+<div class="centerbox clear">
+  <div class="wide-form">
+    <%= form_for(@message_template, :url => { :action => "create", :controller => "message_templates" } , remote: true) do |f| %>
+      <p class="nolabel">
+        <%= f.text_field :subject, placeholder: 'Message Subject' %>
+      </p>
+      <p class="nolabel">
+        <%= f.text_area :message, placeholder: 'Message Body' %>
+      </p>
+
+      <div><%= f.submit "Save Message Template!" %></div>
+    <% end %>
+  </div>
+</div>

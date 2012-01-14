@@ -3,7 +3,8 @@ class MachineController < ApplicationController
   before_filter :require_logged_in_user
 
   def setup
-    flash[:error] = NOT_AUTHORIZED unless okcupid_login(current_user)
+    @message_template = MessageTemplate.new
+    flash[:error] = NOT_AUTHORIZED unless okcupid_login(current_user, 0)
   end
 
   def matches
@@ -28,12 +29,12 @@ class MachineController < ApplicationController
 
   # LOGIN #
 
-  def okcupid_login(user)
+  def okcupid_login(user, count)
     resp = http_req :login, nil, { :p => nil, :username => user.username, :password => user.okcupid_pass }
-    store_credentials_from_resp(resp)
+    store_credentials_from_resp(resp, count)
   end
 
-  def store_credentials_from_resp(resp)
+  def store_credentials_from_resp(resp, count)
     begin
       session[:okcupid] ||= {}
       session[:okcupid][:session] = resp.headers["Set-Cookie"].to_s.scan(/session=[0-9a-zA-Z%]*/)[0].gsub('session=', '')
@@ -41,7 +42,12 @@ class MachineController < ApplicationController
       session[:okcupid][:user_id] = resp.body.scan(/au=[0-9a-zA-Z]*/)[0].gsub('au=', '')
       true
     rescue Exception => e
-      false
+      # FIXME: this is a crazy hack because it seems you need to set session before getting an authcode. I think this is because the first redirect should set session in the cookies, but probably isn't. Thus it takes two full round trips to get all the info
+      unless count >= 1
+        okcupid_login(current_user, count+1) 
+      else
+        debugger
+      end
     end
   end
   

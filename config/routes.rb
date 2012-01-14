@@ -1,4 +1,6 @@
 MatchMachine::Application.routes.draw do
+  resources :message_templates
+
   get "machine/setup"
   get "machine/matches"
   post "machine/message"

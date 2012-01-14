@@ -7,4 +7,3 @@ module MachineHelper
   end
 end
 
-#onclick="this.form.target='_blank';return true;"
