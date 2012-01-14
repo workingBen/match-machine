@@ -11,7 +11,11 @@ class MachineController < ApplicationController
   end
 
   def message
-    debugger
+    subject = "Test Subject"
+    message = "Test Message"
+    username = params[:username]
+    username = "CeleryWitPButter"
+    send_message(username, subject, message)
   end
 
   private
@@ -25,7 +29,7 @@ class MachineController < ApplicationController
   # LOGIN #
 
   def okcupid_login(user)
-    resp = http_req :login, { :p => nil, :username => user.username, :password => user.okcupid_pass }
+    resp = http_req :login, nil, { :p => nil, :username => user.username, :password => user.okcupid_pass }
     store_credentials_from_resp(resp)
   end
 
@@ -33,8 +37,8 @@ class MachineController < ApplicationController
     begin
       session[:okcupid] ||= {}
       session[:okcupid][:session] = resp.headers["Set-Cookie"].to_s.scan(/session=[0-9a-zA-Z%]*/)[0].gsub('session=', '')
-      #session[:okcupid][:authlink] = resp.headers["Set-Cookie"].to_s.scan(/authlink=[0-9a-zA-Z%]*/)[0].gsub('authlink=', '')
-      #session[:okcupid][:user_id] = resp.body.scan(/au=[0-9a-zA-Z]*/)[0].gsub('au=', '')
+      session[:okcupid][:authcode] = resp.body.to_s.scan(/authid=[0-9a-zA-Z%]*/)[0].gsub('authid=', '')
+      session[:okcupid][:user_id] = resp.body.scan(/au=[0-9a-zA-Z]*/)[0].gsub('au=', '')
       true
     rescue Exception => e
       false
@@ -46,7 +50,7 @@ class MachineController < ApplicationController
   def okcupid_matches(user)
     # TODO: put search_params inside params hash 
     search_params = "count=100&filter1=0,34&filter2=2,21,28&filter3=3,25&filter4=5,604800&filter5=1,1&filter6=35,2&filter7=9,2&filter8=12,28&filter9=13,6&filter10=18,8&filter11=10,15240,17272&locid=0&timekey=1&sort1=2,80&sort2=8,100&sort3=7,10&sort4=4,10&sort5=0,20&matchSortRelative=1&custom_search=0&fromWhoOnline=0&mygender=m&update_prefs=1&sort_type=0&sa=1&using_saved_search=" 
-    resp = http_req :match, { :username => user.username, :password => user.okcupid_pass }, search_params
+    resp = http_req :match, search_params, { :username => user.username, :password => user.okcupid_pass }
 
     process_matches(resp.body.to_s)
   end
@@ -67,11 +71,17 @@ class MachineController < ApplicationController
     html.present? ? html : nil
   end
 
+  # SEND MESSAGE #
+  
+  def send_message(username, subject, message)
+    resp = http_req :mailbox, nil, { :ajax => 1, :sendmsg => 1, :r1 => username, :subject => subject, :body => message, :threadid => 0, :authcode => session[:okcupid][:authcode], :reply => 0, :_ => nil }
+  end
+
   # NETWORKING #
 
   def jhash(hash, spacer = '&') hash.map { |k, v| "#{ k }=#{ v }" }.join spacer end
 
-  def http_req(uri, params = nil, param_str = nil)
+  def http_req(uri, param_str = nil, params = nil)
     @sess = Patron::Session.new unless @sess
     @sess.timeout = 10
     @sess.base_url = "http://www.okcupid.com/"
