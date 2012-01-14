@@ -1,5 +1,5 @@
 MatchMachine::Application.routes.draw do
-  resources :message_templates
+  resources :message_templates, only: [:create, :update]
 
   get "machine/setup"
   get "machine/matches"

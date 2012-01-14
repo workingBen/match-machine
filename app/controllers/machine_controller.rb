@@ -1,9 +1,9 @@
 class MachineController < ApplicationController
   NOT_AUTHORIZED = 'Your OkCupid credentials were not authorized.'
   before_filter :require_logged_in_user
+  before_filter :set_message_template, only: [:setup, :message]
 
   def setup
-    @message_template = MessageTemplate.new
     flash[:error] = NOT_AUTHORIZED unless okcupid_login(current_user, 0)
   end
 
@@ -12,9 +12,9 @@ class MachineController < ApplicationController
   end
 
   def message
-    subject = "Test Subject"
-    message = "Test Message"
-    username = params[:username]
+    subject = @message_template.subject
+    message = @message_template.message
+    #username = params[:username]
     username = "CeleryWitPButter"
     send_message(username, subject, message)
   end
@@ -25,6 +25,10 @@ class MachineController < ApplicationController
   
   def require_logged_in_user
     redirect_to new_user_session_path unless user_signed_in?
+  end
+
+  def set_message_template
+    @message_template = current_user.message_templates.last || MessageTemplate.new
   end
 
   # LOGIN #
