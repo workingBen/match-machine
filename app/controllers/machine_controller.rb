@@ -6,6 +6,10 @@ class MachineController < ApplicationController
   def setup
     flash[:error] = NOT_AUTHORIZED unless okcupid_login(current_user, 0)
   end
+  
+  def run_machine
+    redirect_to machine_matches_path
+  end
 
   def matches
     redirect_to edit_user_registration_path, flash: { error: NOT_AUTHORIZED } unless @html = okcupid_matches(current_user)

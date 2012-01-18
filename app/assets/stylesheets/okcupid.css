@@ -24,7 +24,7 @@ div.percentages {
   float: left;
 }
 div.essay {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(10, 30, 70, 0.7);
   clear: left;
   float: left;
   font-size: 1em;
@@ -61,7 +61,7 @@ span.online-now-notice {
   opacity: 0.6;
 }
 .hover_nav {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(10, 30, 70, 0.4);
   float: left;
   overflow: auto;
   position: relative;

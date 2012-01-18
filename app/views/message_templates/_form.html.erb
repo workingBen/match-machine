@@ -1,0 +1,11 @@
+<%= form_for(@message_template, remote: true) do |f| %>
+      <p class="nolabel">
+        <%= f.text_field :subject, placeholder: 'Message Subject', value: @message_template.subject %>
+      </p>
+      <p class="nolabel">
+        <%= f.text_area :message, placeholder: 'Message Body', value: @message_template.message %>
+      </p>
+      <%= f.hidden_field :user_id, value: current_user.id.to_s %>
+
+      <div><%= f.submit "Save Message Template!" %></div>
+    <% end %>

@@ -1,1 +1,3 @@
-alert('message sent!');
+$('#flash_notice').remove();
+$('body').prepend('<div id="flash-container" style="display: none;"><div id="flash_notice">Message sent.</div></div>');
+$('#flash-container').fadeIn(500).delay(6000).fadeOut(500);

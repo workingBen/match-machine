@@ -5,6 +5,14 @@
  *= require_self
  *= require_tree . 
 */
+#message_template_subject, #message_template_message {
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+#message_template_message {
+  height: 150px;
+}
 .signin {
   border: 1px solid #d8d8d8;
   background-color:rgba(24,59,98,0.6);
@@ -79,6 +87,12 @@ ul.hmenu {
 }
 ul.hmenu li {
   display: inline;  
+}
+#flash-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 #flash_notice, #flash_error {
   padding: 8px 8px;

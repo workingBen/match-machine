@@ -1,0 +1,6 @@
+<%= form_tag 'run_machine', method: :get do %>
+      <%= hidden_field_tag :user_id, value: current_user.id.to_s %>
+
+      <div><%= submit_tag "Run Machine!" %></div>
+    <% end %>
+

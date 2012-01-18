@@ -1,0 +1,68 @@
+http://www.okcupid.com/match?filter1=0,63&filter2=2,18,32&filter3=3,250&filter4=5,3600&filter5=1,0&filter6=35,0&filter7=9,2&locid=0&timekey=1&sort1=0,100&fromWhoOnline=0&mygender=m&update_prefs=1&sort_type=0&sa=1&using_saved_search=
+http://www.okcupid.com/match?filter1=0,63&filter2=2,18,32&filter3=3,250&filter4=5,3600&filter5=1,0&filter6=35,0&filter7=9,10&locid=0&timekey=1&sort1=0,100&custom_search=0&fromWhoOnline=0&mygender=m&update_prefs=1&sort_type=0&sa=1&using_saved_search=
+
+
+
+
+PARAMS
+* set gender: mygender=[m,f]
+* TYPE: 
+  Girls who like guys: filter1=0,34
+  Guys who like girls: filter1=0,17
+  Girls who like girls: filter1=0,40
+  Guys who like guys: filter1=0,20
+  Both who like bi guys: 0,54
+  Both who like bi girls: 0,57
+  Straight girls only: 2
+  Straight guys only: 1
+  Gay girls only: 8
+  Gay guys only: 4
+  Bi Girls only: 32
+  Bi Guys only: 16
+  Everybody: filter1=0,63
+* ages: filter2=2,18,32 :: filter2=2,{age1},{age2}
+* within X miles: filter3=3,25&locid=0&timekey=1
+* ONLINE:
+  Online now: 3600
+  In the last day: 86400
+  In the last week: 604800 
+  In the last month: 2678400
+  In the last year: 31536000
+* Has Photo: filter5=1,0 (no) 1,1 (yes)
+* Status: 
+  Single: filter6=35,2
+  Not single: 35,12
+  Any status: 35,0
+* Ethnicity: 
+  Asian: filter7=9,2
+  Black: 9,8
+  Latin: 128
+  Indian: 32
+  Middle Eastern: 4
+  Native American: 16
+  Pacific Islander: 64
+  White: 256
+  Human: 512
+Height: 5'0" : 15240, each inch increases by 254
+
+
+
+SORT:
+  Match %: 0,100
+  Friend %: 3,100
+  Enemy %: 1,100
+  Who's new: 6,100
+  Last online: sort1=4,100
+  Special Blend: sort1=2,80&sort2=8,100&sort3=7,10&sort4=4,10&sort5=0,20
+  Match and New: sort1=0,50&sort2=6,60&sort3=8,40&matchSortRelative=1
+  Match and Last Online: sort1=0,50&sort2=4,50&sort3=8,40
+  Match and distance: sort1=0,50&sort2=7,50&sort3=8,40
+
+
+* matchSortRelative=1
+
+
+
+
+
+
