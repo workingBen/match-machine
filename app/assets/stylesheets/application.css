@@ -5,12 +5,29 @@
  *= require_self
  *= require_tree . 
 */
-#message_template_subject, #message_template_message {
+.message_modal {
+  padding: 8px 8px;
+  width: 430px;
+  border-radius: 5px;
+  background-color: rgba(24, 59, 98, 0.8);
+  border: solid 1px #1D4063;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  z-index: 9;
+}
+.message_modal h1 {
+  padding: 5px 0 0 5px;
+  margin: 0;
+}
+#message_template_subject, #message_template_message, #message_message, #message_subject {
   width: 400px;
   max-width: 400px;
   min-width: 400px;
 }
-#message_template_message {
+#message_template_message, #message_message {
   height: 150px;
 }
 .signin {
