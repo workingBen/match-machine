@@ -12,4 +12,5 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :username, :email, case_sensitive: false
   
   has_many :message_templates
+  has_many :messages
 end

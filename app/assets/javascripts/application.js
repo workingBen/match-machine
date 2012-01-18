@@ -7,7 +7,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//
+
+// close modal if esc is pressed
+$(document).keyup(function(e) {
+  if (e.keyCode == 27) { $('.message_modal').remove(); }   // esc
+});
+
 $(document).ready(function() {  
   $("#flash_notice, #flash_error").fadeIn(500).delay(6000).fadeOut(500);
 
@@ -18,3 +23,4 @@ $(document).ready(function() {
 
   $('.view_user').each(function(index) { $(this).parent().parent().attr('target', "_blank") });
 });
+
