@@ -13,3 +13,9 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore asset generated files
+/public/assets/application-*.css
+/public/assets/application-*.css.gz
+/public/assets/application-*.js
+/public/assets/application-*.js.gz

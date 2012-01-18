@@ -5,11 +5,16 @@
  *= require_self
  *= require_tree . 
 */
+#message_template_subject, #message_template_message {
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+#message_template_message {
+  height: 150px;
+}
 .signin {
   border: 1px solid #d8d8d8;
-  /* background-color:rgba(231,238,245,0.2);
-  background-color:rgba(246,246,246,0.2); 
-  background-color:rgba(236,55,102,0.2); */
   background-color:rgba(24,59,98,0.6);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -62,6 +67,10 @@ div {
   display: block;
   text-align: center;
 }
+.matches-container {
+  padding-top: 40px;
+  width: 1260px;
+}
 .logo {
   margin-top: 20px;
   margin-left: 10%;
@@ -79,7 +88,13 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
-#flash_notice, #flash_alert {
+#flash-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#flash_notice, #flash_error {
   padding: 8px 8px;
   margin: 0 auto;
   width: 500px;
@@ -92,7 +107,7 @@ ul.hmenu li {
   background-color: #1d4063;
   border: solid 1px #3c84cd;
 }
-#flash_alert {
+#flash_error {
   background-color: #FCC;
   border: solid 1px #C66;
 }
