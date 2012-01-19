@@ -20,6 +20,17 @@ PARAMS
   Bi Girls only: 32
   Bi Guys only: 16
   Everybody: filter1=0,63
+* Ethnicity: 
+  Asian: filter7=9,2
+  Black: 9,8
+  Latin: 128
+  Indian: 32
+  Middle Eastern: 4
+  Native American: 16
+  Pacific Islander: 64
+  White: 256
+  Human: 512
+
 * ages: filter2=2,18,32 :: filter2=2,{age1},{age2}
 * within X miles: filter3=3,25&locid=0&timekey=1
 * ONLINE:
@@ -33,16 +44,7 @@ PARAMS
   Single: filter6=35,2
   Not single: 35,12
   Any status: 35,0
-* Ethnicity: 
-  Asian: filter7=9,2
-  Black: 9,8
-  Latin: 128
-  Indian: 32
-  Middle Eastern: 4
-  Native American: 16
-  Pacific Islander: 64
-  White: 256
-  Human: 512
+
 Height: 5'0" : 15240, each inch increases by 254
 
 

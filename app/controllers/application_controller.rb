@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base
 
   def http_req(uri, param_str = nil, params = nil)
     @sess = Patron::Session.new unless @sess
-    @sess.timeout = 10
+    @sess.timeout = 15
     @sess.base_url = "http://www.okcupid.com/"
     @sess.headers['user-agent'] = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:8.0.1) Gecko/20100101 Firefox/8.0.1'
     # set session, authcode and user_id if we have them

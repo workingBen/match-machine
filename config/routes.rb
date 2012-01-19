@@ -4,8 +4,8 @@ MatchMachine::Application.routes.draw do
   resources :message_templates, only: [:create, :update]
 
   get "machine/setup"
-  get "machine/run_machine"
-  get "machine/matches"
+  post "machine/run_machine"
+  get "machine/match"
 
   root to: 'home#index'
   devise_for :users
