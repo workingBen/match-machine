@@ -4,6 +4,7 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree . 
+ *= require chosen
 */
 .message_modal {
   padding: 8px 8px;
@@ -45,6 +46,10 @@
   text-shadow: none;
   text-transform: uppercase;
   margin-left: 40px;
+}
+li {
+  color: black;
+  font-size: 1em;
 }
 div {
   color: white;

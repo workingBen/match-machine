@@ -30,9 +30,6 @@ PARAMS
   Pacific Islander: 64
   White: 256
   Human: 512
-
-* ages: filter2=2,18,32 :: filter2=2,{age1},{age2}
-* within X miles: filter3=3,25&locid=0&timekey=1
 * ONLINE:
   Online now: 3600
   In the last day: 86400
@@ -44,6 +41,10 @@ PARAMS
   Single: filter6=35,2
   Not single: 35,12
   Any status: 35,0
+* within X miles: filter3=3,25&locid=0&timekey=1
+
+
+* ages: filter2=2,18,32 :: filter2=2,{age1},{age2}
 
 Height: 5'0" : 15240, each inch increases by 254
 

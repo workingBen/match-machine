@@ -91,8 +91,9 @@ class MachineController < ApplicationController
   }
 
   def process_filters(h)
-    ret, c = {}, 1
+    ret, c = {}, 0
     h.each do |k,v|
+      c+=1
       if f = FILTER_MAP[k.to_sym]
         add_filter(ret, c, "#{f},#{v}")
       elsif k == 'age_begin'
@@ -103,6 +104,8 @@ class MachineController < ApplicationController
         add_filter(ret, c, "9,#{sum_ethnicity(v)}")
       elsif k == 'height'
         add_filter(ret, c, "10,15240#{15240+254*v}")
+      else
+        c-=1 #decrement the count, we didn't find a filter match
       end
     end
     ret
@@ -110,7 +113,6 @@ class MachineController < ApplicationController
 
   def add_filter(h, c, v)
     h["filter"+c.to_s]=v
-    c+=1
   end
 
   # FIXME: can I write this with inject or reduce? gave up bc inject had problems with arrays of string ints
