@@ -1,8 +1,8 @@
 
   <%= form_tag 'run_machine', method: :post do %>
     <%= hidden_field_tag 'search_form[user_id]', current_user.id.to_s %>
-    <%= select_tag 'search_form[type]', options_for_select(ApplicationHelper::TYPE_MAP), {include_blank: 'Type'} %>
-    <%= select_tag 'search_form[ethnicity]', options_for_select(ApplicationHelper::ETHNICITY_LIST), {include_blank: 'Ethnicity', :multiple => true, :size => 8} %>
+    <%= select_tag 'search_form[type]', options_for_select(ApplicationHelper::TYPE_MAP), {include_blank: true, 'data-placeholder' => 'Type of Person'} %>
+    <%= select_tag 'search_form[ethnicity]', options_for_select(ApplicationHelper::ETHNICITY_LIST), {include_blank: true, 'data-placeholder' => 'Ethnicity', :multiple => true, :size => 8, style: 'width: 300px;'} %>
   
     <div><%= submit_tag "Run Machine!" %></div>
   <% end %>

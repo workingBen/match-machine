@@ -1,12 +1,12 @@
+.user_new, .user_edit, .button_to {
+  width: 300px;
+}
 form {
 	font-family: "Tahoma", "Geneva", sans-serif;
 	color: #626292;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 600px;
-}
-.user_new, .user_edit, .button_to {
-  width: 300px;
 }
 fieldset {
 	border: 1px solid #626292;
@@ -54,7 +54,7 @@ label {
 	text-transform: capitalize;
 	line-height: 33px;
 }
-input[type=text], input[type=email], textarea, input[type=password] {
+input[type=text][not_chzn], input[type=email], textarea, input[type=password] {
 	border: 1px solid #626292;
 	color: #626292;
 	padding: 10px;
@@ -73,7 +73,7 @@ input[type=text], input[type=email], textarea, input[type=password] {
 	bottom: 0;
 	left: 110px;
 }
-p.nolabel input[type=text], p.nolabel input[type=email], p.nolabel textarea, p.nolabel input[type=password], div.field_with_errors input[type=text], div.field_with_errors input[type=email], div.field_with_errors textarea, div.field_with_errors input[type=password] {
+p.nolabel input[type=text][not_chzn], p.nolabel input[type=email], p.nolabel textarea, p.nolabel input[type=password], div.field_with_errors input[type=text][not_chzn], div.field_with_errors input[type=email], div.field_with_errors textarea, div.field_with_errors input[type=password] {
 	position: relative;
 	left: 0;
 }
@@ -97,7 +97,7 @@ button, input[type=submit] {
 	background: -moz-linear-gradient(top, #f8f8ff, #dedeee 1px, #e8e8ee 25px); 
 	padding: 10px;
 }
-input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, textarea:hover, input[type=submit]:hover, button:hover, input[type=radio]:hover:before, input[type=checkbox]:hover:before, select:hover {
+input[type=text][not_chzn]:hover, input[type=email]:hover, input[type=password]:hover, textarea:hover, input[type=submit]:hover, button:hover, input[type=radio]:hover:before, input[type=checkbox]:hover:before {
 	-webkit-box-shadow: #336 0 0 3px;
 	box-shadow: #336 0 0 3px;
 	-moz-box-shadow: #336 0 0 3px;
@@ -115,7 +115,7 @@ input[type=text]:hover, input[type=email]:hover, input[type=password]:hover, tex
 		-moz-box-shadow: #336 0 0 10px;
 	}
 }
-input[type=text]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, input[type=submit]:focus, button:focus, input[type=radio]:focus:before, .radioreplacement:focus, input[type=checkbox]:focus:before, .checkboxreplacement:focus, select:focus {
+input[type=text][not_chzn]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus, input[type=submit]:focus, button:focus, input[type=radio]:focus:before, .radioreplacement:focus, input[type=checkbox]:focus:before, .checkboxreplacement:focus {
 	outline: 0;
 	-webkit-box-shadow: #336 0 0 3px;
 	box-shadow: #336 0 0 3px;
@@ -196,19 +196,5 @@ input[type=checkbox], input[type=radio] {
 	position: relative;
 	top: 6px;
 }
-select {
-	border: 1px solid #626292;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-border-radius: 3px;
-	-khtml-border-radius: 3px;
-	color: #202050;
-	-webkit-box-shadow: #d3d3e3 0.1em 0.1em 0.2em;
-	box-shadow: #d3d3e3 0.1em 0.1em 0.2em;
-	background: -webkit-gradient(linear, left top, left 25, from(#f8f8ff), color-stop(4%, #e8e8ee), to(#f8f8ff));  
-	background: -moz-linear-gradient(top, #f8f8ff, #dedeee 1px, #e8e8ee 25px); 
-	position: relative;
-	top: 6px;
-	height: 20px;
-}
+
 

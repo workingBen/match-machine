@@ -47,6 +47,10 @@
   text-transform: uppercase;
   margin-left: 40px;
 }
+li {
+  color: black;
+  font-size: 1em;
+}
 div {
   color: white;
   font-family: Tahoma,Arial,sans-serif;
