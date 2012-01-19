@@ -14,7 +14,7 @@ module ApplicationHelper
     ["Bi Guys only:", "16"],
     ["Everybody:", "63"],
   ]
-  ETHNICITY_LIST = [
+  ETHNICITY_MAP = [
     ["Asian", "asian"],
     ["Middle Eastern", "middle_eastern"],
     ["Black", "black"],
@@ -24,5 +24,29 @@ module ApplicationHelper
     ["Latin", "latin"],
     ["White", "white"],
     ["Human", "human"]
+  ]
+  HAS_PHOTO_MAP = [
+    ["Yes", "1"],
+    ["No", "0"]
+  ]
+  LAST_ONLINE_MAP = [
+    ["Online now", "3600"],
+    ["In the last day", "86400"],
+    ["In the last week", "604800"],
+    ["In the last month", "2678400"],
+    ["In the last year", "31536000 "]
+  ]
+  STATUS_MAP = [
+    ["Single", "2"],
+    ["Not single", "12"],
+    ["Any status", "0"]
+  ]
+  RADIUS_MAP = [
+    ["5 miles", "5"],
+    ["25 miles", "25"],
+    ["50 miles", "50"],
+    ["100 miles", "100"],
+    ["250 miles", "250"],
+    ["500 miles", "500"]
   ]
 end

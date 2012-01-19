@@ -60,7 +60,6 @@ class MachineController < ApplicationController
   def get_search_params
     search_params = "count=100&update_prefs=1&locid=0&timekey=1&" 
     search_params += jhash(process_filters(params[:search_form]))
-    debugger
     search_params
   end
 

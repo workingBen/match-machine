@@ -4,6 +4,7 @@
   position: relative;
   display: inline-block;
   zoom: 1;
+  padding-bottom: 5px;
   *display: inline;
 }
 .chzn-container .chzn-drop {
@@ -154,6 +155,7 @@
   height: auto !important;
   height: 1%;
   position: relative;
+  top: 14px;
 }
 .chzn-container-multi .chzn-choices li {
   float: left;
