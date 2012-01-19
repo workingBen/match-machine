@@ -21,6 +21,7 @@ gem 'devise'
 gem 'pg'
 gem 'patron', '0.4.9'
 gem 'chosen-rails'
+gem 'nokogiri'
 
 group :development, :test do
   gem 'rspec-rails'
