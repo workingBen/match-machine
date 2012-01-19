@@ -8,6 +8,9 @@ form {
 	padding-bottom: 10px;
 	width: 430px;
 }
+form.small {
+  width: 430px;
+}
 fieldset {
 	border: 1px solid #626292;
 	padding: 0;
