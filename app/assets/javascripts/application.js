@@ -7,6 +7,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require chosen-jquery
+
 
 // close modal if esc is pressed
 $(document).keyup(function(e) {
@@ -22,5 +24,7 @@ $(document).ready(function() {
   );
 
   $('.view_user').each(function(index) { $(this).parent().parent().attr('target', "_blank") });
+
+  $('select').chosen();
 });
 
