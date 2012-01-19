@@ -16,7 +16,7 @@ $(document).keyup(function(e) {
 });
 
 $(document).ready(function() {  
-  $("#flash_notice, #flash_error").fadeIn(500).delay(6000).fadeOut(500);
+  $("#flash_notice, #flash_error, #flash_alert").fadeIn(500).delay(6000).fadeOut(500);
 
   $("div.wrapper").hover( 
     function() { $(this).children('.hover_nav').show(); },

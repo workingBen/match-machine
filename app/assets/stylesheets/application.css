@@ -116,7 +116,7 @@ ul.hmenu li {
   top: 0;
   left: 0;
 }
-#flash_notice, #flash_error {
+#flash_notice, #flash_error, #flash_alert {
   padding: 8px 8px;
   margin: 0 auto;
   width: 500px;
@@ -129,7 +129,7 @@ ul.hmenu li {
   background-color: #1d4063;
   border: solid 1px #3c84cd;
 }
-#flash_error {
+#flash_error, #flash_alert {
   background-color: #FCC;
   border: solid 1px #C66;
 }
