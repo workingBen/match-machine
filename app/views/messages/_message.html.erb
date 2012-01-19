@@ -1,11 +1,11 @@
   <div class="message_modal">
     <h1><%= @message.sent_to_username %></h1>
-    <%= form_for(@message, remote: true, confirm: "Are you sure you want to message #{@message.sent_to_username}" ) do |f| %>
+    <%= form_for(@message, remote: true, confirm: "Are you sure you want to message #{@message.sent_to_username}", class: 'sm' ) do |f| %>
       <p class="nolabel">
-        <%= f.text_field :subject, placeholder: 'Message Subject', value: @message.subject %>
+        <%= f.text_field :subject, placeholder: 'Message Subject', value: @message.subject, not_chzn: true %>
       </p>
       <p class="nolabel">
-        <%= f.text_area :message, placeholder: 'Message Body', value: @message.message %>
+        <%= f.text_area :message, placeholder: 'Message Body', value: @message.message, not_chzn: true %>
       </p>
       <%= f.hidden_field :user_id, value: current_user.id.to_s %>
       <%= f.hidden_field :sent_to_username, value: @message.sent_to_username %>
