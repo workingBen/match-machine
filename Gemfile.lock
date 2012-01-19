@@ -205,6 +205,7 @@ DEPENDENCIES
   heroku
   jquery-rails
   launchy
+  nokogiri
   patron (= 0.4.9)
   pg
   rails (= 3.1.3)
