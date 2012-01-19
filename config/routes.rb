@@ -1,4 +1,12 @@
 MatchMachine::Application.routes.draw do
+  resources :messages
+
+  resources :message_templates, only: [:create, :update]
+
+  get "machine/setup"
+  post "machine/run_machine"
+  get "machine/match"
+
   root to: 'home#index'
   devise_for :users
   resources :users, only: :show

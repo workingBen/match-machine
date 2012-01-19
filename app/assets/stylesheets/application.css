@@ -4,12 +4,35 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree . 
+ *= require chosen
 */
+.message_modal {
+  padding: 8px 8px;
+  width: 430px;
+  border-radius: 5px;
+  background-color: rgba(24, 59, 98, 0.8);
+  border: solid 1px #1D4063;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -200px;
+  z-index: 9;
+}
+.message_modal h1 {
+  padding: 5px 0 0 5px;
+  margin: 0;
+}
+#message_template_subject, #message_template_message, #message_message, #message_subject {
+  width: 400px;
+  max-width: 400px;
+  min-width: 400px;
+}
+#message_template_message, #message_message {
+  height: 150px;
+}
 .signin {
   border: 1px solid #d8d8d8;
-  /* background-color:rgba(231,238,245,0.2);
-  background-color:rgba(246,246,246,0.2); 
-  background-color:rgba(236,55,102,0.2); */
   background-color:rgba(24,59,98,0.6);
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -23,6 +46,10 @@
   text-shadow: none;
   text-transform: uppercase;
   margin-left: 40px;
+}
+li {
+  color: black;
+  font-size: 1em;
 }
 div {
   color: white;
@@ -62,6 +89,10 @@ div {
   display: block;
   text-align: center;
 }
+.matches-container {
+  padding-top: 40px;
+  width: 1260px;
+}
 .logo {
   margin-top: 20px;
   margin-left: 10%;
@@ -79,7 +110,13 @@ ul.hmenu {
 ul.hmenu li {
   display: inline;  
 }
-#flash_notice, #flash_alert {
+#flash-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#flash_notice, #flash_error {
   padding: 8px 8px;
   margin: 0 auto;
   width: 500px;
@@ -92,7 +129,7 @@ ul.hmenu li {
   background-color: #1d4063;
   border: solid 1px #3c84cd;
 }
-#flash_alert {
+#flash_error {
   background-color: #FCC;
   border: solid 1px #C66;
 }

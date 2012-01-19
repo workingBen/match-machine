@@ -10,4 +10,7 @@ class User < ActiveRecord::Base
   # VALIDATIONS
   validates_presence_of :username
   validates_uniqueness_of :username, :email, case_sensitive: false
+  
+  has_many :message_templates
+  has_many :messages
 end

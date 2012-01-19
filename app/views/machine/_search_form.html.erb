@@ -1,0 +1,17 @@
+<div class="signin">
+  <%= image_tag 'setup_machine_title.png', class: 'center' %>
+  <%= form_tag 'run_machine', method: :post do %>
+    <%= hidden_field_tag 'search_form[user_id]', current_user.id.to_s %>
+    <%= select_tag 'search_form[type]', options_for_select(ApplicationHelper::TYPE_MAP), {include_blank: true, 'data-placeholder' => 'Type of Person', style: 'width: 150px;'} %>
+    <%= select_tag 'search_form[ethnicity]', options_for_select(ApplicationHelper::ETHNICITY_MAP), {include_blank: true, 'data-placeholder' => 'Ethnicity', :multiple => true, :size => 8, style: 'width: 300px;'} %>
+    <br/>
+    <%= select_tag 'search_form[has_photo]', options_for_select(ApplicationHelper::HAS_PHOTO_MAP), {include_blank: true, 'data-placeholder' => 'Has Photo', style: 'width: 150px;'} %>
+    <%= select_tag 'search_form[last_online]', options_for_select(ApplicationHelper::LAST_ONLINE_MAP), {include_blank: true, 'data-placeholder' => 'Last Online', style: 'width: 150px;'} %>
+    <%= select_tag 'search_form[status]', options_for_select(ApplicationHelper::STATUS_MAP), {include_blank: true, 'data-placeholder' => 'Status', style: 'width: 150px;'} %>
+    <br/>
+    <%= select_tag 'search_form[radius]', options_for_select(ApplicationHelper::RADIUS_MAP), {include_blank: true, 'data-placeholder' => 'Search Radius', style: 'width: 150px;'} %>
+  
+    <div><%= submit_tag "Run Machine!" %></div>
+  <% end %>
+</div>
+
