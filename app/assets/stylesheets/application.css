@@ -5,6 +5,8 @@
  *= require_self
  *= require_tree . 
  *= require chosen
+ *= require blue
+ *= require okcupid
 */
 .message_modal {
   padding: 8px 8px;
