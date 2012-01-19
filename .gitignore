@@ -15,4 +15,4 @@
 /tmp
 
 # Ignore asset generated files
-/public/assets/*.*
+/public/assets/*
