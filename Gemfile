@@ -19,7 +19,7 @@ end
 gem 'jquery-rails'
 gem 'devise'
 gem 'pg'
-gem 'patron'
+gem 'patron', '0.4.9'
 gem 'chosen-rails'
 
 group :development, :test do
